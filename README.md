@@ -40,33 +40,20 @@ The actor optimized to run in a very fast manner and scrape the flights in the m
 
 ```json
 {
-  "CarrierCode": "EJU",
-  "FlightNumber": 4358,
-  "SegmentId": "20220810AJALYS4358",
-  "DepartureIata": "AJA",
-  "ArrivalIata": "LYS",
-  "LocalDepartureTime": "2022-08-10T12:15:00",
-  "LocalArrivalTime": "2022-08-10T13:25:00",
-  "FlightFares": [
-    {
-      "FareType": "Standard",
-      "SeatsAvailable": 9,
-      "LowestFareSeatsAvailable": 4,
-      "Prices": {
-        "Adult": {
-          "Price": 42.22,
-          "PriceWithDebitCard": 42.22,
-          "PriceWithCreditCard": 42.22
-        }
-      },
-      "FlightIdentification": "UlAwMUJCQkIzYk44QkJCQkJCQkJBSkFCQkJCNi5MWVNCNC5FVVJCQkJCUy5FVVJCTjA3MjAyMi0wOC0xMCAxMjoxNTowMFFK"
-    }
-  ],
-  "PromotionalFareType": "None",
-  "FlightTaxes": {
-    "TaxAmount": 27.23,
-    "ApplyApdRules": false
+  "adults": 1,
+  "arrival": "AMS",
+  "departure": "LPL",
+  "departureDate": "2023-01-06",
+  "mode": "ROUND",
+  "proxy": {
+    "useApifyProxy": true
   },
-  "IsDisrupted": false
+  "returnDate": "2023-02-08"
 }
+```
+
+### Easyjet Scraper Output example
+
+```json
+https://api.apify.com/v2/datasets/oKobkcRCgfeIuiNKE/items?clean=true&format=json
 ```
