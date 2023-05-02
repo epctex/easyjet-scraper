@@ -16,20 +16,28 @@ This scraper is under active development. If you have any feature requests you c
 
 ## Input Parameters
 
-The input of this scraper should be JSON containing. Required fields are:
+The input of this scraper should be JSON containing. Possible fields are:
 
-| Field            | Type    | Description                                                                                                                                                                                                                                                     |
-| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mode             | String  | Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One way trips.                                                                                                                                                                      |
-| arrival           | String  | 3-letter arrival airport code. Ex: VIE                                                                                                                                                                                                                           |
-| departure      | String  | 3-letter departure airport code. Ex: VIE                                                                                                                                                                                                                      |
-| departureDate    | String  | Date for departure. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21                                                                                                                                                                                     |
-| departureDate    | String  | Date for return. It is required for Round trips. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21                                                                                                                                                        |
-| adults           | Integer | Number of adults that will be included on the flight. Minimum number is 1.                                                                                                                                                                                      |
-| children         | Integer | (optional) Number of children (2-11 years old) that will be included on the flight.                                                                                                                                                                             |
-| infants          | Integer | (optional) (optional) Number of teens (Under 2 years old) that will be included on the flight.                                                                                                                                                                  |
-| maxItems         | Integer | (optional) You can limit scraped products. Default is `Infinite`.                                                                                                                                                                                               |
-| proxy            | Object  | Proxy configuration                                                                                                                                                                                                                                             |
+- `mode`: (Required) (String) Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One way trips.
+
+- `arrival`: (Required) (String) 3-letter arrival airport code. Ex: VIE.
+
+- `departure`: (Required) (String) 3-letter departure airport code. Ex: VIE.
+
+- `departureDate`: (Required) (String) Date for departure. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21.
+
+- `returnDate`: (Optional) (String) Date for return. It is required for Round trips. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21.
+
+- `adults`: (Required) (Number) Number of adults that will be included on the flight. Minimum number is 1.
+
+- `infants`: (Optional) (Number) Number of teens (Under 2 years old) that will be included on the flight.
+
+- `children`: (Optional) (Number) Number of children (2-11 years old) that will be included on the flight.
+
+- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
+
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use <a href="https://www.apify.com/docs/proxy">Apify Proxy</a>.
 
 ### Compute Unit Consumption
